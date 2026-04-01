@@ -1,0 +1,27 @@
+# Секретные файлы
+.env
+*.env
+
+# Логи
+logs/
+*.log
+
+# Виртуальное окружение
+venv/
+env/
+ENV/
+
+# Кэш Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ОС
+.DS_Store
+Thumbs.db

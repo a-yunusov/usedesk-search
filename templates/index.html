@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поиск тикетов Usedesk</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.png') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container mt-4">
+        <!-- Заголовок -->
+        <div class="text-center mb-4">
+            <h1 class="page-title">Поиск тикетов</h1>
+            <p class="text-muted">Введите номер тикета (только если клиент писал на почту), тему тикету, почту или телефон для поиска</p>
+        </div>
+        
+        <!-- Форма поиска (в одну строку) -->
+        <div class="search-container mb-4">
+            <div class="search-wrapper">
+                <form id="searchForm" class="search-form">
+                    <div class="input-group">
+                        <input 
+                            type="text" 
+                            class="form-control search-input" 
+                            id="searchInput" 
+                            placeholder="Например: 266810241 или abuzov@macroscop.com"
+                            required
+                        >
+                        <button type="submit" class="btn btn-search">
+                            <span class="search-text">Найти</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        <!-- Область для отображения результатов -->
+        <div id="resultsContainer" style="display: none;">
+            <div class="results-card">
+                <div class="results-header">
+                    <h5 class="results-title">Результаты поиска</h5>
+                </div>
+                
+                <div class="table-wrapper">
+                    <table class="minimal-table">
+                        <thead>
+                            <tr>
+                                <th>№ Тикета</th>
+                                <th>Тема</th>
+                                <th>Специалист</th>
+                                <th>Статус</th>
+                                <th>Дата</th>
+                                <th>Клиент</th>
+                            </tr>
+                        </thead>
+                        <tbody id="resultsTableBody">
+                        </tbody>
+                    </table>
+                </div>
+                
+                <!-- Пагинация -->
+                <nav aria-label="Pagination" id="paginationContainer" class="mt-4" style="display: none;">
+                    <ul class="pagination justify-content-center" id="paginationList">
+                    </ul>
+                </nav>
+                
+                <!-- Информация о количестве результатов -->
+                <div class="results-info text-center mt-3" id="resultsInfo">
+                </div>
+            </div>
+        </div>
+        
+        <!-- Область для отображения сообщений об ошибках -->
+        <div id="errorContainer" class="alert alert-danger" style="display: none;" role="alert">
+        </div>
+        
+        <!-- Область для отображения сообщения о загрузке -->
+        <div id="loadingContainer" style="display: none;" class="text-center">
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Загрузка...</span>
+            </div>
+            <p class="mt-2">Идет поиск тикетов...</p>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

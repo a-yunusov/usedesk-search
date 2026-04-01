@@ -1,0 +1,456 @@
+/* ========================================
+   СОВРЕМЕННЫЙ МИНИМАЛИСТИЧНЫЙ ДИЗАЙН
+   ======================================== */
+
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+    color: #333;
+    padding: 20px 0;
+}
+
+/* Заголовок страницы */
+.page-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+}
+
+.text-muted {
+    font-size: 1rem;
+    color: #7f8c8d;
+}
+
+/* Контейнер поиска */
+.search-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.search-wrapper {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    padding: 8px;
+    transition: box-shadow 0.3s ease;
+}
+
+.search-wrapper:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Форма поиска */
+.search-form {
+    display: flex;
+    width: 100%;
+}
+
+.input-group {
+    display: flex;
+    width: 100%;
+}
+
+/* Поле ввода поиска */
+.search-input {
+    flex: 1;
+    border: none;
+    border-radius: 8px 0 0 8px;
+    padding: 14px 20px;
+    font-size: 1rem;
+    background: #f8f9fa;
+    transition: all 0.3s ease;
+}
+
+.search-input:focus {
+    background: white;
+    box-shadow: none;
+    outline: none;
+}
+
+/* Кнопка поиска */
+.btn-search {
+    flex: 0 0 120px;
+    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+    border: none;
+    border-radius: 0 8px 8px 0;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.btn-search:hover {
+    background: linear-gradient(135deg, #2980b9 0%, #1a68a0 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+}
+
+.btn-search:active {
+    transform: translateY(0);
+}
+
+.search-icon {
+    font-size: 1.2rem;
+}
+
+.search-text {
+    font-size: 0.95rem;
+}
+
+/* Контейнер результатов */
+.results-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+.results-header {
+    padding: 20px 24px;
+    background: linear-gradient(135deg, #2c3e50 0%, #1a252f 100%);
+}
+
+.results-title {
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Обёртка таблицы */
+.table-wrapper {
+    overflow-x: auto;
+    padding: 0 24px 24px;
+}
+
+/* Минималистичная таблица */
+.minimal-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+}
+
+.minimal-table thead {
+    background: #f8f9fa;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.minimal-table th {
+    padding: 12px 16px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.minimal-table td {
+    padding: 14px 16px;
+    border-bottom: 1px solid #f0f2f5;
+    font-size: 0.95rem;
+    color: #444;
+    transition: background-color 0.2s ease;
+}
+
+.minimal-table tr:hover td {
+    background-color: #f8f9ff;
+}
+
+/* Ссылки на тикеты */
+.ticket-link {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+    display: inline-block;
+}
+
+.ticket-link:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+/* Статусы тикетов - обновлённая цветовая схема */
+.status-open {
+    display: inline-block;
+    padding: 4px 12px;
+    background: #e3f2fd;
+    color: #1976d2;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.status-completed {
+    display: inline-block;
+    padding: 4px 12px;
+    background: #e8f5e9;
+    color: #2e7d32;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.status-closed {
+    display: inline-block;
+    padding: 4px 12px;
+    background: #e8f5e9;
+    color: #2e7d32;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.status-deleted {
+    display: inline-block;
+    padding: 4px 12px;
+    background: #e3f2fd;
+    color: #1976d2;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.status-on-hold {
+    display: inline-block;
+    padding: 4px 12px;
+    background: #e3f2fd;
+    color: #1976d2;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.status-pending {
+    display: inline-block;
+    padding: 4px 12px;
+    background: #e3f2fd;
+    color: #1976d2;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.status-spam {
+    display: inline-block;
+    padding: 4px 12px;
+    background: #ffebee;
+    color: #c62828;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.status-new {
+    display: inline-block;
+    padding: 4px 12px;
+    background: #e3f2fd;
+    color: #1976d2;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.status-mailing {
+    display: inline-block;
+    padding: 4px 12px;
+    background: #f5f5f5;
+    color: #616161;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.status-merged {
+    display: inline-block;
+    padding: 4px 12px;
+    background: #f5f5f5;
+    color: #616161;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+/* Информация о результатах */
+.results-info {
+    padding: 12px 24px;
+    background: #f8f9fa;
+    border-top: 1px solid #e9ecef;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Пагинация */
+.pagination {
+    --bs-pagination-padding-x: 0.75rem;
+    --bs-pagination-padding-y: 0.375rem;
+    --bs-pagination-font-size: 0.9rem;
+}
+
+.pagination .page-link {
+    color: #3498db;
+    background-color: transparent;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    margin: 0 2px;
+    transition: all 0.2s ease;
+}
+
+.pagination .page-link:hover {
+    background-color: #3498db;
+    color: white;
+    border-color: #3498db;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #3498db;
+    border-color: #3498db;
+    color: white;
+    font-weight: 600;
+}
+
+.pagination .page-item.disabled .page-link {
+    color: #adb5bd;
+    background-color: transparent;
+    border-color: #dee2e6;
+}
+
+/* Сообщения об ошибках */
+.alert {
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 1.8rem;
+    }
+    
+    .search-input {
+        padding: 12px 16px;
+        font-size: 0.95rem;
+    }
+    
+    .btn-search {
+        flex: 0 0 100px;
+        padding: 12px 16px;
+        font-size: 0.9rem;
+    }
+    
+    .search-text {
+        display: none;
+    }
+    
+    .minimal-table {
+        font-size: 0.85rem;
+    }
+    
+    .minimal-table th,
+    .minimal-table td {
+        padding: 10px 12px;
+    }
+    
+    .status-open,
+    .status-closed,
+    .status-pending,
+    .status-unknown {
+        padding: 3px 10px;
+        font-size: 0.75rem;
+    }
+    
+    .results-header {
+        padding: 16px 20px;
+    }
+    
+    .results-title {
+        font-size: 1.1rem;
+    }
+    
+    .table-wrapper {
+        padding: 0 16px 16px;
+    }
+}
+
+/* Дополнительные улучшения для планшетов */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .search-input {
+        padding: 13px 18px;
+    }
+    
+    .btn-search {
+        flex: 0 0 110px;
+    }
+}
+
+/* Задаем фиксированную таблицу для корректной работы процентных ширин */
+.minimal-table {
+    table-layout: fixed;
+    width: 100%;
+}
+
+/* Ширина колонок в процентах */
+.minimal-table th:nth-child(1),
+.minimal-table td:nth-child(1) { width: 10%; } /* № Тикета */
+
+.minimal-table th:nth-child(2),
+.minimal-table td:nth-child(2) { width: 33%; } /* Тема */
+
+.minimal-table th:nth-child(3),
+.minimal-table td:nth-child(3) { width: 15%; } /* Специалист */
+
+.minimal-table th:nth-child(4),
+.minimal-table td:nth-child(4) { width: 12%; } /* Статус */
+
+.minimal-table th:nth-child(5),
+.minimal-table td:nth-child(5) { width: 12%; } /* Дата */
+
+.minimal-table th:nth-child(6),
+.minimal-table td:nth-child(6) { width: 18%; } /* Клиент */
+
+/* Обрезание длинного текста с многоточием */
+.minimal-table td,
+.minimal-table th {
+    white-space: nowrap;        /* Запрещает перенос на новую строку */
+    overflow: hidden;           /* Скрывает текст, выходящий за границы */
+    text-overflow: ellipsis;    /* Добавляет "..." в конце */
+}
